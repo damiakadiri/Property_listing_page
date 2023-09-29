@@ -14,7 +14,8 @@ async function getProperty() {
     throw new Error(`HTTP error! status: ${response.status}`);
   }
   const data = await response.json(); // Extracting data as a JSON Object from the response
-  showProperties(data.hits);
+  console.log(data);
+  showProperties(data.hits.slice(0, 12));
 }
 
 getProperty();
