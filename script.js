@@ -1,4 +1,6 @@
 const properties = document.querySelector(".properties");
+const property = document.getElementById("prop");
+
 const url =
   "https://bayut.p.rapidapi.com/properties/list?locationExternalIDs=5002%2C6020&purpose=for-rent&hitsPerPage=25&page=0&lang=en&sort=city-level-score&rentFrequency=monthly&categoryExternalID=4";
 
@@ -26,20 +28,16 @@ function showProperties(property) {
     const { title, price, location } = item;
     const image = item.coverPhoto.url;
 
-    const propertyEl = document.createElement("div");
-    propertyEl.classList.add("property");
-
-    propertyEl.innerHTML = `
-
-     <img
+    const markup = `
+    <div class="property" id="prop">
+       <img
        src="${image}"
-       alt="house"
-      />
-      <h3>${price}</h3>
-      <p>${title}</p>
-
-
+        alt="house"
+       />
+       <h3>$${price}</h3>
+       <p>${title}</p>
+    </div>
     `;
-    properties.appendChild(propertyEl);
+    properties.insertAdjacentHTML("afterbegin", markup);
   });
 }

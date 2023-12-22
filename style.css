@@ -108,6 +108,7 @@ form button {
   border-radius: 5px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  cursor: pointer;
 }
 
 .property img {
@@ -119,6 +120,56 @@ form button {
 
 .property:hover img {
   opacity: 0.8;
+}
+
+.property h3,
+.property p {
+  padding-left: 5px;
+}
+
+.footer {
+  width: 100%;
+  height: 35vh;
+  background-color: #36454f;
+}
+.icons {
+  display: flex;
+  gap: 20px;
+  padding: 40px 0 0 40px;
+}
+
+.icon {
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+ion-icon {
+  font-size: 32px;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 45px 0 0 40px;
+}
+
+ul li {
+  list-style: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+ul li:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 760px) {
